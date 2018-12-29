@@ -48,7 +48,7 @@
 
 #### 界面与功能介绍
 
-![1](https://github.com/MirageLyu/java-2018f-homework/blob/master/Final%20Project/%E5%88%98%E7%AC%91%E4%BB%8A-161220084/img/1.png)
+![1](https://github.com/MirageLyu/Heaven-Hell-Battle/blob/master/img/1.png)
 
 界面核心部分是一个10*20的矩阵空间，每一个位置可以放置一个生物，或一个物品（后面说）。旁边有两个按钮，点击Start，将根据默认阵法开始战斗；点击Load，可以从本地文件中，选择.slog文件加载存档，重现之前的战斗情形。
 
@@ -92,7 +92,7 @@
 
 实体包括生物和物品，生物又包括葫芦娃、老爷爷、蝎子精等等。
 
-![2](https://github.com/MirageLyu/java-2018f-homework/blob/master/Final%20Project/%E5%88%98%E7%AC%91%E4%BB%8A-161220084/img/2.png)
+![2](https://github.com/MirageLyu/Heaven-Hell-Battle/blob/master/img/2.png)
 
 这些实体中定义了一系列的方法，以满足其他特性的实现：
 
@@ -124,13 +124,13 @@
 
 ##### 阵型设定方法
 
-![3](https://github.com/MirageLyu/java-2018f-homework/blob/master/Final%20Project/%E5%88%98%E7%AC%91%E4%BB%8A-161220084/img/3.png)
+![3](https://github.com/MirageLyu/Heaven-Hell-Battle/blob/master/img/3.png)
 
 实现了8种阵型，boolean参数的含义为，判断将阵型部署在左侧还是右侧。
 
 ##### 战争结束判定
 
-![4](https://github.com/MirageLyu/java-2018f-homework/blob/master/Final%20Project/%E5%88%98%E7%AC%91%E4%BB%8A-161220084/img/4.png)
+![4](https://github.com/MirageLyu/Heaven-Hell-Battle/blob/master/img/4.png)
 
 该方法判断了战争是否结束。其逻辑即：一旦两个阵营的存活队列有空的，即为战争结束。
 
@@ -140,11 +140,11 @@
 
 本项目中，将许多属性、常量独立出来，而不是写死在代码中。这为之后修改一些属性值等提供了便利。
 
-![5](https://github.com/MirageLyu/java-2018f-homework/blob/master/Final%20Project/%E5%88%98%E7%AC%91%E4%BB%8A-161220084/img/5.png)
+![5](https://github.com/MirageLyu/Heaven-Hell-Battle/blob/master/img/5.png)
 
 这三个Dict，可以获取实体的identifier，以及根据identifier获取图片，通过葫芦娃的排序获取名字。这些值若之后有修改，将非常便利。
 
-![6](https://github.com/MirageLyu/java-2018f-homework/blob/master/Final%20Project/%E5%88%98%E7%AC%91%E4%BB%8A-161220084/img/6.png)
+![6](https://github.com/MirageLyu/Heaven-Hell-Battle/blob/master/img/6.png)
 
 在Configuration类中，将许多数值独立出来，使得其易于修改。（拓展：这里还考虑到实现配置文件，每次程序初始化时读入数据。可行，但并未实现）。
 
@@ -156,7 +156,7 @@
 
 如何将实体矩阵转成一个帧当中记录的信息？通过一个ShowBeing接口。这个接口中声明了以下方法：
 
-![7](https://github.com/MirageLyu/java-2018f-homework/blob/master/Final%20Project/%E5%88%98%E7%AC%91%E4%BB%8A-161220084/img/7.png)
+![7](https://github.com/MirageLyu/Heaven-Hell-Battle/blob/master/img/7.png)
 
 并为Being类附加上ShowBeing接口。这样，就实现了从Being矩阵到帧的转换。
 
